@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Please wait, loading survey...</p>
+
+    <script>
+        (function() {
+            // ONLY EDIT THE TWO LINKS BELOW
+            const links = [
+                "https://docs.google.com/forms/d/e/1FAIpQLScZe3MNKoIaQurMLOKxb_5H_A1Y-Qf5xEQC9d5J1K-WHkqDUA/viewform?usp=pp_url&entry.1654312951=Yes",      "https://docs.google.com/forms/d/e/1FAIpQLSdUEfODXDM1kDJKu5kN3GbzE-H9ifTRGVJnB4lj_rncGhYnqQ/viewform?usp=pp_url&entry.1654312951=No",
+"https://forms.gle/fpk4aKkJN56LChJ46"
+            ];
+
+            const chosen = links[Math.floor(Math.random() * links.length)];
+            
+            if (chosen && chosen.startsWith("http")) {
+                window.location.replace(chosen);
+            } else {
+                document.body.innerHTML = "Error: Survey links are not set up correctly.";
+            }
+        })();
+    </script>
+</body>
+</html>
